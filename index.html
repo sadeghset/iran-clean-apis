@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iran API Finder</title>
+    <meta
+      name="description"
+      content="پیدا کردن APIهای سبک، سریع و مناسب برای شرایط اینترنت ایران"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <div class="brand-wrap">
+            <div class="brand-mark">API</div>
+            <div>
+              <p class="eyebrow">Iran-ready stack</p>
+              <h1>Iran API Finder</h1>
+            </div>
+          </div>
+          <a href="#directory" class="nav-link">لیست APIها</a>
+        </nav>
+
+        <div class="hero-content">
+          <div class="hero-copy">
+            <span class="badge">برای اینترنت ایران</span>
+            <h2>APIهای تمیز، سریع و کم‌هدر برای کاربران ایرانی</h2>
+            <p>
+              این صفحه، سرویس‌های مناسب برای ساخت اپلیکیشن‌ها و وب‌سایت‌هایی که
+              در شرایط شبکهٔ ایران با پهنای باند محدود و latency متغیر اجرا می‌شوند،
+              را فیلتر و نمایش می‌دهد.
+            </p>
+            <div class="hero-actions">
+              <a href="#directory" class="primary-btn">مشاهده APIها</a>
+              <a href="#tips" class="secondary-btn">چکیده‌ی انتخاب</a>
+            </div>
+          </div>
+
+          <div class="score-card">
+            <p>رتبه‌ی میانگین</p>
+            <div class="score-row">
+              <strong>8.7</strong>
+              <span>از 10</span>
+            </div>
+            <ul>
+              <li>latency متوسط: 120ms</li>
+              <li>پهنای باند کم: مناسب</li>
+              <li>CDN / cache: فعال</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section id="directory" class="directory">
+          <div class="toolbar">
+            <div class="search-box">
+              <label for="searchInput">جست‌وجو</label>
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="نام API، نوع سرویس یا ویژگی..."
+              />
+            </div>
+
+            <div class="filter-group" aria-label="فیلتر دسته‌بندی">
+              <button class="filter-btn active" data-filter="all">همه</button>
+              <button class="filter-btn" data-filter="low-bandwidth">کم‌پهنای‌باند</button>
+              <button class="filter-btn" data-filter="cdn">CDN</button>
+              <button class="filter-btn" data-filter="auth">احراز هویت</button>
+              <button class="filter-btn" data-filter="maps">نقشه / محلی</button>
+              <button class="filter-btn" data-filter="payments">پرداخت</button>
+            </div>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-box">
+              <strong id="apiCount">0</strong>
+              <span>API</span>
+            </div>
+            <div class="stat-box">
+              <strong>≤120ms</strong>
+              <span>latency مناسب</span>
+            </div>
+            <div class="stat-box">
+              <strong>50KB</strong>
+              <span>حجم پاسخ سبک</span>
+            </div>
+          </div>
+
+          <div id="apiGrid" class="api-grid" aria-live="polite"></div>
+        </section>
+
+        <section id="tips" class="tips">
+          <div class="section-header">
+            <span class="mini-label">راهنمای انتخاب</span>
+            <h3>چطور API مناسب ایران انتخاب کنیم؟</h3>
+          </div>
+
+          <div class="tips-grid">
+            <article class="tip-card">
+              <h4>۱. سایز پاسخ را کم نگه دارید</h4>
+              <p>
+                از JSONهای بزرگ و فیلدهای اضافی پرهیز کنید؛ هر فیلد اضافی، مصرف
+                پهنای باند را بالا می‌برد و تجربه کاربر را خراب می‌کند.
+              </p>
+            </article>
+
+            <article class="tip-card">
+              <h4>۲. از CDN و cache استفاده کنید</h4>
+              <p>
+                اگر داده‌ها ثابت یا نیمه‌ثابت هستند، بهتر است در لبه‌های نزدیک‌تر
+                به کاربران، کش داده شود.
+              </p>
+            </article>
+
+            <article class="tip-card">
+              <h4>۳. latency را واقعی تست کنید</h4>
+              <p>
+                مدل‌های مختلف شبکه در ایران، latency متفاوتی دارند؛ بنابراین از تست
+                واقعی در شبکه‌های مختلف استفاده کنید.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
